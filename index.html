@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Naser Aldeeb - Flutter Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="scripts.js"></script>
+<!-- <script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#1a237e',
+secondary: '#ffcdd2'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script> -->
+</head>
+<body class="bg-gray-50">
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<span class="text-2xl font-bold text-primary">MNA</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">About</a>
+<a href="#education" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Education</a>
+<a href="#experience" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+<a href="#projects" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Projects</a>
+<a href="#skills" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Skills</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+<button onclick="downloadCV(this)" class="bg-primary text-white px-8 py-2.5 !rounded-button hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-primary/30 font-medium whitespace-nowrap flex items-center">
+<span class="download-text">Download CV</span>
+<div class="loading-spinner ml-2 hidden">
+<i class="ri-loader-4-line animate-spin"></i>
+</div>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<section class="relative h-screen flex items-center" style="background-image: url('assets/images/intro_image.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="text-white">
+<h1 class="text-5xl font-bold mb-4">Mohamed Naser Aldeeb</h1>
+<h2 class="text-2xl mb-6">Flutter Developer</h2>
+<p class="text-lg mb-8">Crafting beautiful and performant mobile applications with Flutter and Dart. Passionate about creating exceptional user experiences.</p>
+<div class="flex space-x-4">
+<a href="#contact" class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">Get in Touch</a>
+<a href="#projects" class="border-2 border-white text-white px-8 py-3 !rounded-button hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">View Projects</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="about" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col items-center md:items-start">
+<div class="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-primary shadow-xl">
+<img src="assets/images/me.jpg" alt="Mohamed Naser Aldeeb" class="w-full h-full object-cover">
+</div>
+<p class="text-lg text-gray-700 mb-6">Junior Mobile Developer with expertise in Flutter, Dart, Firebase, and API integration. Strong foundation in C++ and performance optimization, enabling the creation of scalable, high-performance applications.</p>
+<p class="text-lg text-gray-700 mb-6">Currently pursuing a Computer Science degree at Faculty of Computer Science, continuously enhancing my skills to stay ahead in mobile development.</p>
+<div class="flex space-x-4">
+<a href="http://www.linkedin.com/in/mohamed-naser-aldeeb" target="_blank" class="text-primary hover:text-opacity-80">
+<i class="ri-linkedin-fill ri-2x"></i>
+</a>
+<a href="https://github.com/mhmaldyb510" target="_blank" class="text-primary hover:text-opacity-80">
+<i class="ri-github-fill ri-2x"></i>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-gray-50 p-6 rounded-lg text-center card-hover-animation">
+<h3 class="text-4xl font-bold text-primary mb-2">3+</h3>
+<p class="text-gray-600">Apps Developed</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center card-hover-animation">
+<h3 class="text-4xl font-bold text-primary mb-2">172+</h3>
+<p class="text-gray-600">GitHub Contributions</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="education" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Education</h2>
+<div class="max-w-3xl mx-auto space-y-8">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm">
+<img src="assets/images/Tanta-University-logo.png" alt="Tanta University" class="w-12 h-12 object-contain">
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-bold">Tanta University</h3>
+<p class="text-gray-600">Faculty of Computer Science</p>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-gray-700"><span class="font-medium">Department:</span> Computer Science</p>
+<p class="text-gray-700"><span class="font-medium">Expected Graduation:</span> 2026</p>
+<p class="text-gray-700"><span class="font-medium">Status:</span> Currently Enrolled</p>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm">
+<img src="assets/images/nti-logo.png" alt="NTI" class="w-12 h-12 object-contain">
+</div>
+<div class="ml-6">
+<h3 class="text-xl font-bold">National Telecommunications Institute (NTI)</h3>
+<p class="text-gray-600">Mobile App Development</p>
+</div>
+</div>
+<div class="space-y-2">
+<p class="text-gray-700"><span class="font-medium">Course:</span> Mobile App Development with Flutter</p>
+<p class="text-gray-700"><span class="font-medium">Grade:</span> <span class="text-primary font-medium">95%</span></p>
+<p class="text-gray-700"><span class="font-medium">Duration:</span> 120 Hours (90 Technical, 30 Soft Skills)</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experience" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Experience</h2>
+<div class="max-w-3xl mx-auto">
+<div class="bg-white p-8 rounded-lg shadow-sm mb-8 transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+<h3 class="text-xl font-bold mb-4">Mobile App Development with Flutter</h3>
+<p class="text-gray-600 mb-4">National Telecommunications Institute</p>
+<div class="flex items-center mb-6">
+<span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm">Grade: 95%</span>
+<span class="ml-4 text-gray-500">120 Hours (90 Technical, 30 Soft Skills)</span>
+</div>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+<span>Learned Dart programming fundamentals, object-oriented concepts, and Flutter framework setup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+<span>Designed and developed 10+ mobile applications, including E-commerce app, Quran app, and chat applications</span>
+</li>
+<li class="flex items-start">
+<i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+<span>Integrated APIs for authentication and database management</span>
+</li>
+<li class="flex items-start">
+<i class="ri-checkbox-circle-line text-primary mt-1 mr-2"></i>
+<span>Implemented MVVM architecture and Cubit state management</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gray-50 rounded-lg overflow-hidden card-hover-animation">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/38f6a4fcf2968c87030dce8030e9fc78.jpg')"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Social Media App</h3>
+<p class="text-gray-600 mb-4">A feature-rich social media platform inspired by Facebook and Twitter</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Flutter</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">REST APIs</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Git</span>
+</div>
+<a href="#" class="text-primary hover:text-opacity-80 flex items-center">
+<span>View on GitHub</span>
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg overflow-hidden card-hover-animation">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/4770dedb21b68362f38b0072f72c9678.jpg')"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Twoaxis Finance App</h3>
+<p class="text-gray-600 mb-4">A financial management application for expense tracking and budgeting</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Flutter</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Firebase</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Git</span>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="text-primary hover:text-opacity-80 flex items-center">
+<span>GitHub</span>
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+<a href="#" class="text-primary hover:text-opacity-80 flex items-center">
+<span>Google Play</span>
+<i class="ri-google-play-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 rounded-lg overflow-hidden card-hover-animation">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/2a6e15416fe96446b18c1da3df024c46.jpg')"></div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Pray To Your Lord</h3>
+<p class="text-gray-600 mb-4">An Islamic companion app with Quran integration and prayer times</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Flutter</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Dart</span>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">APIs</span>
+</div>
+<a href="#" class="text-primary hover:text-opacity-80 flex items-center">
+<span>View on GitHub</span>
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Skills & Expertise</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-xl font-bold mb-6">Technical Skills</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-medium">Flutter & Dart</span>
+<span>95%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-medium">Firebase</span>
+<span>90%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-medium">REST APIs</span>
+<span>85%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-medium">Git & GitHub</span>
+<span>88%</span>
+</div>
+<div class="h-2 bg-gray-200 rounded-full">
+<div class="h-2 bg-primary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Soft Skills</h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white p-6 rounded-lg card-hover-animation">
+<i class="ri-team-line text-primary text-3xl mb-4"></i>
+<h4 class="font-medium mb-2">Team Collaboration</h4>
+<p class="text-gray-600">Effective communication and teamwork</p>
+</div>
+<div class="bg-white p-6 rounded-lg card-hover-animation">
+<i class="ri-lightbulb-line text-primary text-3xl mb-4"></i>
+<h4 class="font-medium mb-2">Problem Solving</h4>
+<p class="text-gray-600">Analytical and creative solutions</p>
+</div>
+<div class="bg-white p-6 rounded-lg card-hover-animation">
+<i class="ri-time-line text-primary text-3xl mb-4"></i>
+<h4 class="font-medium mb-2">Time Management</h4>
+<p class="text-gray-600">Efficient project delivery</p>
+</div>
+<div class="bg-white p-6 rounded-lg card-hover-animation">
+<i class="ri-book-open-line text-primary text-3xl mb-4"></i>
+<h4 class="font-medium mb-2">Self Learning</h4>
+<p class="text-gray-600">Continuous skill development</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Get in Touch</h2>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-xl font-bold mb-6">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-map-pin-line text-primary text-xl mr-4"></i>
+<span>Egypt, Gharbia, Tanta</span>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line text-primary text-xl mr-4"></i>
+<span>+20 100 553 6262</span>
+</div>
+<div class="flex items-center">
+<i class="ri-mail-line text-primary text-xl mr-4"></i>
+<span>mhmaldyb510@gmail.com</span>
+</div>
+<div class="flex items-center">
+<i class="ri-linkedin-line text-primary text-xl mr-4"></i>
+<a href="http://www.linkedin.com/in/mohamed-naser-aldeeb" class="hover:text-primary">mohamed-naser-aldeeb</a>
+</div>
+</div>
+</div>
+<div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Mohamed Naser Aldeeb</h3>
+<p class="text-gray-400">Flutter Developer crafting beautiful and performant mobile applications</p>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+<li><a href="#education" class="text-gray-400 hover:text-white">Education</a></li>
+<li><a href="#experience" class="text-gray-400 hover:text-white">Experience</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+<li><a href="#skills" class="text-gray-400 hover:text-white">Skills</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Connect</h3>
+<div class="flex space-x-4">
+<a href="http://www.linkedin.com/in/mohamed-naser-aldeeb" class="text-gray-400 hover:text-white">
+<i class="ri-linkedin-fill ri-2x"></i>
+</a>
+<a href="https://github.com/yourgithub" class="text-gray-400 hover:text-white">
+<i class="ri-github-fill ri-2x"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Mohamed Naser Aldeeb. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

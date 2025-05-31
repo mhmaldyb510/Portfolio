@@ -28,7 +28,7 @@ function downloadCV(button) {
     downloadText.textContent = 'Downloading...';
     loadingSpinner.classList.remove('hidden');
     button.disabled = true;
-    fetch('assets/files/my_cv.docx')
+    fetch('assets/files/my_cv.pdf')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -39,7 +39,7 @@ function downloadCV(button) {
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'my_cv.docx';
+            a.download = 'my_cv.pdf';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);

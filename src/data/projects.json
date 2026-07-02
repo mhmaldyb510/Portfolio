@@ -1,0 +1,35 @@
+[
+  {
+    "id": "tactix-ai",
+    "name": "TACTIX AI",
+    "description": "AI assistant for football managers providing tactical recommendations, squad management support, and match intelligence.",
+    "role": "Software Engineer - Flutter, Backend, DevOps, AI planning",
+    "tags": ["Flutter", "Dart", "Backend", "DevOps", "AI"],
+    "links": {
+      "repo": "https://github.com/mhmaldyb510",
+      "live": "https://github.com/mhmaldyb510"
+    }
+  },
+  {
+    "id": "gourmetgo",
+    "name": "GourmetGo",
+    "description": "Production eCommerce marketplace. Includes deployed admin panel, website, Firebase configuration, and Hostinger deployment.",
+    "role": "Software Engineer - Flutter, Web, Firebase, DevOps",
+    "tags": ["Flutter", "Firebase", "Hostinger", "eCommerce"],
+    "links": {
+      "repo": "https://github.com/mhmaldyb510",
+      "live": "https://github.com/mhmaldyb510"
+    }
+  },
+  {
+    "id": "twoaxis-finance",
+    "name": "TwoAxis Finance",
+    "description": "Production finance application featuring Flutter development and API integrations.",
+    "role": "Software Engineer - Flutter, API Integration",
+    "tags": ["Flutter", "Dart", "REST APIs", "Finance"],
+    "links": {
+      "repo": "https://github.com/mhmaldyb510",
+      "live": "https://github.com/mhmaldyb510"
+    }
+  }
+]

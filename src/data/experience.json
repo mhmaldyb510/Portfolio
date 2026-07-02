@@ -1,0 +1,27 @@
+[
+  {
+    "dateRange": "2026-05 - Present",
+    "title": "Freelance Software Engineer",
+    "organization": "",
+    "details": [
+      "Delivered Flutter/full-stack solutions, deployed production apps, worked with Firebase and Hostinger."
+    ],
+    "type": "work"
+  },
+  {
+    "dateRange": "2025-02 - 2025-03",
+    "title": "Flutter Development Trainee",
+    "organization": "NTI",
+    "details": [
+      "Completed 90 hours hands-on training, developed 10+ apps, achieved 100% final evaluation score."
+    ],
+    "type": "work"
+  },
+  {
+    "dateRange": "2022-10 - 2026-07",
+    "title": "Bachelor of Computer Science",
+    "organization": "Tanta University",
+    "details": [],
+    "type": "education"
+  }
+]

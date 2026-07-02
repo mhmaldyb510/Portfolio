@@ -1,0 +1,27 @@
+---
+import projects from '../data/projects.json';
+import TerminalWindow from '../components/TerminalWindow.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const featuredProjects = projects.slice(0, 3);
+---
+
+<section id="projects" class="px-4 py-16">
+  <div class="mx-auto max-w-5xl">
+    <TerminalWindow title="~/projects">
+      <SectionHeader path="~/portfolio/projects" command="cd ~/projects && ls -l | head -n 3" />
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+      <div class="mt-6 flex justify-center">
+        <a
+          href="/projects"
+          class="inline-flex items-center gap-2 rounded border border-electric-blue/30 bg-electric-blue/5 px-4 py-2 text-sm font-bold text-electric-blue transition-all duration-300 hover:bg-electric-blue/10 hover:border-electric-blue hover:shadow-[0_0_16px_rgba(0,217,255,0.2)]"
+        >
+          [View all projects]
+        </a>
+      </div>
+    </TerminalWindow>
+  </div>
+</section>

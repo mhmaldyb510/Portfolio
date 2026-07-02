@@ -1,0 +1,53 @@
+---
+import profile from '../data/profile.json';
+import TerminalWindow from '../components/TerminalWindow.astro';
+import TerminalPrompt from '../components/TerminalPrompt.astro';
+import BlinkCursor from '../components/BlinkCursor.astro';
+import Typewriter from '../components/Typewriter.astro';
+import AvatarPlaceholder from '../components/AvatarPlaceholder.astro';
+---
+
+<section class="min-h-screen flex items-center justify-center px-4 py-16">
+  <TerminalWindow title="boot-sequence" class="w-full max-w-4xl">
+    <div class="flex flex-col lg:flex-row gap-8 items-center">
+      <div class="flex-1 space-y-5">
+        <div class="text-sm sm:text-base">
+          <TerminalPrompt path="~/portfolio" command={profile.command} />
+          <BlinkCursor />
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-neon-green text-lg sm:text-2xl font-bold break-words">
+            <span class="text-white">$</span>{' '}
+            <Typewriter text={`${profile.name} - ${profile.title}`} />
+          </p>
+          <p class="text-terminal-muted leading-relaxed max-w-3xl text-sm sm:text-base">
+            {profile.summary}
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-1">
+          {
+            profile.ctas.map((cta) => (
+              <a
+                href={cta.href}
+                download={cta.type === 'download' ? true : undefined}
+                class="inline-flex items-center gap-2 rounded border border-neon-green/30 bg-neon-green/5 px-4 py-2 text-sm font-bold text-neon-green transition-all duration-300 hover:bg-neon-green/10 hover:border-neon-green hover:shadow-[0_0_16px_rgba(57,255,20,0.2)]"
+              >
+                {cta.label}
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="pt-2 text-xs text-terminal-muted">
+          <span class="text-neon-green">OK</span> Profile loaded successfully. Ready for input.
+        </div>
+      </div>
+
+      <div class="shrink-0">
+        <img src="/assets/profile.png" alt="Mohamed Naser Eldeeb" class="w-32 h-32 sm:w-40 sm:h-40 rounded-lg object-cover border border-white/10" />
+      </div>
+    </div>
+  </TerminalWindow>
+</section>

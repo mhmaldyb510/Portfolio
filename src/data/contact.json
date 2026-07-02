@@ -1,0 +1,20 @@
+{
+  "command": "ping -c 4 mhmaldyb510@contact",
+  "links": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/mhmaldyb510",
+      "display": "github.com/mhmaldyb510"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/mohamed-naser-aldeeb",
+      "display": "linkedin.com/in/mohamed-naser-aldeeb"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:mhmaldyb510@gmail.com",
+      "display": "mhmaldyb510@gmail.com"
+    }
+  ]
+}

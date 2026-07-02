@@ -1,0 +1,13 @@
+---
+interface Props {
+  path?: string;
+  command?: string;
+}
+
+const { path = '~/portfolio', command = '' } = Astro.props;
+---
+
+<span class="font-mono text-sm sm:text-base">
+  <span class="text-terminal-muted">mhmaldyb510</span><span class="text-white">@</span><span class="text-neon-green">system</span><span class="text-white">:</span><span class="text-electric-blue">{path}</span><span class="text-white">$</span>
+  {command && <span class="ml-2 text-terminal-text">{command}</span>}
+</span>

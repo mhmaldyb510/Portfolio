@@ -1,0 +1,59 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Mohamed Naser Eldeeb | Portfolio',
+  description = 'Software Engineer specializing in Flutter, backend services, cloud deployments, and scalable software solutions.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-black text-terminal-text">
+    <slot />
+  </body>
+</html>
+
+<script>
+  (function () {
+    function typeWriter(el: HTMLElement) {
+      const text = el.dataset.text || '';
+      let i = 0;
+      el.textContent = '';
+      const speed = el.dataset.speed ? parseInt(el.dataset.speed, 10) : 28;
+
+      function type() {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        }
+      }
+
+      const delay = el.dataset.delay ? parseInt(el.dataset.delay, 10) : 0;
+      setTimeout(type, delay);
+    }
+
+    function init() {
+      document.querySelectorAll<HTMLElement>('[data-typewriter]').forEach(typeWriter);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

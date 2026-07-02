@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TerminalWindow from '../components/TerminalWindow.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projects from '../data/projects.json';
+import '../styles/global.css';
+---
+
+<Layout title="Projects | Mohamed Naser Eldeeb">
+  <main class="min-h-screen px-4 py-16">
+    <div class="mx-auto max-w-5xl space-y-6">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-electric-blue hover:text-neon-green hover:underline transition-colors"
+      >
+        ← cd ~/
+      </a>
+
+      <TerminalWindow title="~/projects">
+        <SectionHeader path="~/portfolio/projects" command="ls -la" />
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => <ProjectCard project={project} />)}
+        </div>
+      </TerminalWindow>
+    </div>
+  </main>
+</Layout>

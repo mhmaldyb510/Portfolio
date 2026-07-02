@@ -1,0 +1,16 @@
+---
+import TerminalPrompt from './TerminalPrompt.astro';
+import BlinkCursor from './BlinkCursor.astro';
+
+interface Props {
+  path: string;
+  command: string;
+}
+
+const { path, command } = Astro.props;
+---
+
+<div class="mb-5">
+  <TerminalPrompt path={path} command={command} />
+  <BlinkCursor />
+</div>

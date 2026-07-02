@@ -1,0 +1,18 @@
+{
+  "command": "./execute_profile.sh",
+  "name": "Mohamed Naser Eldeeb",
+  "title": "Software Engineer | Flutter Specialist | Backend & DevOps Enthusiast",
+  "summary": "Software Engineer specializing in Flutter with experience delivering production-ready mobile applications, backend services, cloud deployments, and scalable software solutions. Passionate about software architecture, automation, AI-assisted development, and building maintainable systems from idea to deployment.",
+  "ctas": [
+    {
+      "label": "[Run View_Projects.exe]",
+      "href": "#projects",
+      "type": "internal"
+    },
+    {
+      "label": "[Download resume.pdf]",
+      "href": "/assets/resume.pdf",
+      "type": "download"
+    }
+  ]
+}

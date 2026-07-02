@@ -1,0 +1,10 @@
+---
+interface Props {
+  text: string;
+  class?: string;
+}
+
+const { text, class: className = '' } = Astro.props;
+---
+
+<span data-typewriter data-text={text} class={className}></span>

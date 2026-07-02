@@ -1,0 +1,27 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  display: string;
+  index: number;
+}
+
+const { name, url, display, index } = Astro.props;
+const time = (1.2 + index * 0.4).toFixed(1);
+---
+
+<div class="mb-3 group">
+  <p class="text-sm text-terminal-muted">
+    <span class="text-neon-green">64 bytes</span> from{' '}
+    <span class="text-keyword-orange">{name.toLowerCase()}</span>: icmp_seq={index + 1} ttl=64 time=
+    <span class="text-electric-blue">{time} ms</span>
+  </p>
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="ml-4 inline-flex items-center gap-2 text-sm text-electric-blue hover:text-neon-green hover:underline transition-colors"
+  >
+    <span class="text-terminal-muted">-></span> {display}
+  </a>
+</div>

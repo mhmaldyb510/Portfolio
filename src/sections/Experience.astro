@@ -1,0 +1,17 @@
+---
+import experience from '../data/experience.json';
+import TerminalWindow from '../components/TerminalWindow.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import LogLine from '../components/LogLine.astro';
+---
+
+<section class="px-4 py-16">
+  <div class="mx-auto max-w-5xl">
+    <TerminalWindow title="timeline.log">
+      <SectionHeader path="~/portfolio/timeline" command="cat timeline.log" />
+      <div class="space-y-2">
+        {experience.map((entry) => <LogLine entry={entry} />)}
+      </div>
+    </TerminalWindow>
+  </div>
+</section>

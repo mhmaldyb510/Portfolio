@@ -1,0 +1,32 @@
+---
+import contact from '../data/contact.json';
+import TerminalWindow from '../components/TerminalWindow.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PingResult from '../components/PingResult.astro';
+import BlinkCursor from '../components/BlinkCursor.astro';
+---
+
+<section class="px-4 py-16">
+  <div class="mx-auto max-w-5xl">
+    <TerminalWindow title="ping-protocol">
+      <SectionHeader path="~/portfolio/contact" command={contact.command} />
+      <div class="space-y-1">
+        <p class="text-sm text-terminal-muted mb-3">
+          PING mhmaldyb510@contact (127.0.0.1) 56(84) bytes of data.
+        </p>
+        {contact.links.map((link, index) => <PingResult {...link} index={index} />)}
+        <div class="mt-4 border-t border-white/10 pt-3 text-sm text-terminal-muted">
+          <p>--- mhmaldyb510@contact ping statistics ---</p>
+          <p>4 packets transmitted, 4 received, 0% packet loss, time 3ms</p>
+        </div>
+      </div>
+    </TerminalWindow>
+  </div>
+</section>
+
+<footer class="py-8 text-center text-xs text-terminal-muted">
+  <p>
+    mhmaldyb510@system:~/portfolio$ <span class="text-neon-green">exit</span>
+    <BlinkCursor />
+  </p>
+</footer>

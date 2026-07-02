@@ -1,0 +1,9 @@
+{
+  "Languages": ["Dart", "C++", "Python", "JavaScript"],
+  "Mobile": ["Flutter", "Bloc", "Clean Architecture"],
+  "Backend": ["NestJS", "Dart Frog", "FastAPI", "Flask", "REST APIs"],
+  "Databases": ["MongoDB", "PostgreSQL", "SQLite", "Firebase", "Supabase"],
+  "DevOps & Cloud": ["Docker", "Linux", "GitHub Actions", "CI/CD", "Hostinger", "Azure"],
+  "AI & Automation": ["LLM APIs", "AI SDKs", "Prompt Engineering", "MCP Servers"],
+  "Web Scraping & Tools": ["Playwright", "Impit", "Git", "Postman"]
+}

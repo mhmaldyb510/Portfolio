@@ -1,0 +1,13 @@
+---
+interface Props {
+  group: string;
+  skills: string[];
+}
+
+const { group, skills } = Astro.props;
+---
+
+<div class="contents">
+  <dt class="text-electric-blue font-semibold">{group}</dt>
+  <dd class="text-neon-green">{skills.join(', ')}</dd>
+</div>
